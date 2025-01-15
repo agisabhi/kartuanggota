@@ -92,11 +92,6 @@
                     </div>
                     
                     <div class="mb-4">
-                      <label class="form-label" for="example-ltf-password">Alamat</label>
-                      <textarea name="alamat" class="form-control" id="" cols="30" rows="3" wire:model="alamat"></textarea>
-                      @error('alamat') <span class="error" style="color: red"><small>{{ $message }}</small></span> @enderror
-                    </div>
-                    <div class="mb-4">
                       <button type="submit" name="submit" class="btn btn-primary col-lg-12">{{ $anggotaId ? 'Update' : 'Save' }}</button>
                     </div>
                   </form>
@@ -134,7 +129,7 @@
                       <th>Kab/Kota</th>
                       {{-- <th>Kecamatan</th>
                       <th>Kelurahan</th> --}}
-                      <th>Alamat</th>
+                      {{-- <th>Alamat</th> --}}
                       <th class="text-center" style="width: 100px;">Actions</th>
                     </tr>
                   </thead>
@@ -148,7 +143,7 @@
                             <td>{{ $dataAnggota->city->name }}</td>
                             {{-- <td>{{ $dataAnggota->district->name }}</td>
                             <td>{{ $dataAnggota->village->name }}</td> --}}
-                            <td>{{ $dataAnggota->alamat }}</td>
+                            {{-- <td>{{ $dataAnggota->alamat }}</td> --}}
                             <td class="text-center">
                         <div class="btn-group">
                           <a class="btn btn-sm btn-primary" data-bs-toggle="tooltip" href="/generateCard/{{ $dataAnggota->id }}">

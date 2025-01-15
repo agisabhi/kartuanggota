@@ -4,6 +4,7 @@ use App\Livewire;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/', function () {
 
 Route::get('/anggota', [AnggotaController::class, 'index']);
 Route::get('/generateCard/{id}', [CardController::class, 'generateCard']);
+
+Route::get('/setting', [SettingController::class, 'index']);

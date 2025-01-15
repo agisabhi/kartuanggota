@@ -36,7 +36,6 @@ class Anggota extends Component
     public $selectedCity = null;
     public $selectedDistrict = null;
     public $selectedVillage = null;
-    public $alamat;
 
 
     protected $rules = [
@@ -46,7 +45,6 @@ class Anggota extends Component
         'selectedCity' => 'required',
         'selectedDistrict' => 'required',
         'selectedVillage' => 'required',
-        'alamat' => 'required',
     ];
 
     public function updated($propertyName)
@@ -103,7 +101,6 @@ class Anggota extends Component
         $this->selectedCity = $anggota->selectedCity;
         $this->selectedDistrict = $anggota->selectedDistrict;
         $this->selectedVillage = $anggota->selectedVillage;
-        $this->alamat = $anggota->alamat;
     }
 
     public function store()

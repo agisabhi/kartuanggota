@@ -113,9 +113,12 @@
               </div>
             </div>
             <div class="block-content">
-              <p class="fs-sm text-muted">
-                
-              </p>
+               <input 
+                    type="text" 
+                    class="form-control mb-4" 
+                    placeholder="Cari berdasarkan Nomor Anggota, Nama, Provinsi, atau Kabupaten..." 
+                    wire:model.live="search" 
+                />
               <div class="table-responsive">
                 <table class="table table-bordered table-striped table-vcenter">
                   <thead>
@@ -134,7 +137,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($dataAnggotas as $dataAnggota)
+                    @forelse ($dataAnggotas as $dataAnggota)
                         <tr>
                             <td>{{ $dataAnggota->nomor_kta }}</td>
                             <td>{{ $dataAnggota->nama }}</td>
@@ -155,7 +158,11 @@
                         </div>
                       </td>
                         </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                      <td colspan="5" align="center">--Data tidak ditemukan--</td>
+                    </tr>
+                    @endforelse
                     
                     
                   </tbody>

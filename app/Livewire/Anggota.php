@@ -24,6 +24,7 @@ class Anggota extends Component
     protected $listener = ['updatedSelectedProvince', 'updatedSelectedCity', 'updatedSelectedDistrict', 'updatedSelectedVillage'];
 
     public $anggotaId;
+    public $search = '';
     public $nomor_kta;
     public $nama;
     public $nik;
@@ -46,6 +47,11 @@ class Anggota extends Component
         'selectedDistrict' => 'required',
         'selectedVillage' => 'required',
     ];
+
+    public function updatingSearch()
+    {
+        $this->resetPage(); // Reset halaman ke 1 jika pencarian diubah
+    }
 
     public function updated($propertyName)
     {
@@ -84,7 +90,12 @@ class Anggota extends Component
     public function render()
     {
         $data = [
-            'dataAnggotas' => ModelAnggota::paginate(5),
+            'dataAnggotas' => ModelAnggota::when($this->search, function ($query) {
+                $query->where('nomor_kta', 'like', '%' . $this->search . '%')
+                    ->orWhere('nama', 'like', '%' . $this->search . '%')
+                    ->orWhere('selectedProvince', 'like', '%' . $this->search . '%')
+                    ->orWhere('selectedCity', 'like', '%' . $this->search . '%');
+            })->paginate(10),
             'province' => IndonesiaProvinces::orderBy('name', 'ASC')->get(),
         ];
         return view('livewire.create-anggota', $data);

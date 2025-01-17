@@ -12,9 +12,9 @@
             padding: 0;
             font-family: Arial, sans-serif;
             font-size: 12pt;
-            background-image: url('src/kartu_anggota1.png');
+            background-image: url('{{ $settings }}');
             background-size: cover;
-            background-position: center;
+            background-attachment: fixed;
             background-repeat: no-repeat;
         }
     
@@ -83,7 +83,7 @@
             </tbody>
         </table>
         <br>
-        <table style="width: 100%">
+        {{-- <table style="width: 100%">
             <tr>
                 <td align="center"><b>Ketua Umum</b></td>
                 <td align="center"><b>Sekretaris Jenderal</b></td>
@@ -100,7 +100,7 @@
                 <td align="center"><b>H. JUBAEDI AF</b></td>
                 <td align="center"><b>TB. TISNA</b></td>
             </tr>
-        </table>
+        </table> --}}
         </div>
     </body>
 </html>

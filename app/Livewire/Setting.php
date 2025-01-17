@@ -12,12 +12,6 @@ class Setting extends Component
 {
     use WithFileUploads, LivewireAlert;
 
-    #[Validate('required')] // 1MB Max
-    public $ketua_umum;
-
-    #[Validate('required')] // 1MB Max
-    public $sekjen;
-
     #[Validate('image|max:2048')] // 1MB Max
     public $background_card;
 

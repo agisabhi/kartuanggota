@@ -95,7 +95,8 @@ class Anggota extends Component
                     ->orWhere('nama', 'like', '%' . $this->search . '%')
                     ->orWhere('selectedProvince', 'like', '%' . $this->search . '%')
                     ->orWhere('selectedCity', 'like', '%' . $this->search . '%');
-            })->paginate(10),
+            })->orderBy('created_at', 'DESC')
+                ->paginate(10),
             'province' => IndonesiaProvinces::orderBy('name', 'ASC')->get(),
         ];
         return view('livewire.create-anggota', $data);

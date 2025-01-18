@@ -21,5 +21,6 @@
         Core libraries and functionality
         webpack is putting everything together at /src/assets/_js/main/app.js
     -->
+    <script src="/src/assets/js/oneui.app.min.js"></script>
   </body>
 </html>

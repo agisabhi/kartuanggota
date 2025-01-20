@@ -17,11 +17,11 @@ use App\Http\Controllers\SettingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/anggota', [AnggotaController::class, 'index']);
+Route::get('/', [AnggotaController::class, 'index']);
 Route::get('/generateCard/{id}', [CardController::class, 'generateCard']);
 
 Route::get('/setting', [SettingController::class, 'index']);

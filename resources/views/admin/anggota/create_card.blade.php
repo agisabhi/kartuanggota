@@ -75,11 +75,7 @@
                 <td>:</td>
                 <td>{{ $dataAnggota->province->name }}</td>
             </tr>
-            <tr>
-                <td>Alamat Lengkap</td>
-                <td>:</td>
-                <td>{{ $dataAnggota->alamat }}</td>
-            </tr>
+            
             </tbody>
         </table>
         <br>

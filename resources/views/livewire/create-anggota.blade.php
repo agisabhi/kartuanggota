@@ -149,7 +149,7 @@
                             {{-- <td>{{ $dataAnggota->alamat }}</td> --}}
                             <td class="text-center">
                         <div class="btn-group">
-                          <a class="btn btn-sm btn-primary" data-bs-toggle="tooltip" href="/generateCard/{{ $dataAnggota->id }}">
+                          <a class="btn btn-sm btn-primary" data-bs-toggle="tooltip" href="/generateCardPng/{{ $dataAnggota->id }}">
                             <i class="si si-printer"> Cetak</i>
                           </a>
                           <button wire:click="edit({{ $dataAnggota->id }})" class="btn btn-sm btn-warning"><i class="si si-printer"> Edit</i></button>

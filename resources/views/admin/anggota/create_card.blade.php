@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            font-size: 12pt;
+            font-size: 6.5pt;
             background-image: url('{{ $settings }}');
             background-size: cover;
             background-attachment: fixed;
@@ -37,7 +37,7 @@
     </style>
     <body>
         <div class="table-container">
-            <br><br><br><br><br><br><br>
+            <br><br><br><br><br>
         <table>
             <tbody>
             <tr>
@@ -78,25 +78,24 @@
             
             </tbody>
         </table>
-        <br>
-        {{-- <table style="width: 100%">
+        
+        <table style="width: 100%">
             <tr>
-                <td align="center"><b>Ketua Umum</b></td>
-                <td align="center"><b>Sekretaris Jenderal</b></td>
+                <td align="center" colspan="2"><b>Ketua Umum</b></td>
+                <td align="center" style="width: 50%"><b>Sekretaris Jenderal</b></td>
             </tr>
             <tr>
-                <td align="center"><br><br></td>
-                <td align="center"></td>
+                <td align="right" style="width: 30%"><img src="{{ asset('storage/'.$setting->ttd_ketua) }}" height="10%"></td>
+                <td align="left"><img src="{{ asset('storage/upload/logo.png') }}" height="15%"></td>
+                <td align="center"><img src="{{ asset('storage/'.$setting->ttd_sekjen) }}" height="10%"></td>
             </tr>
+            
             <tr>
-                <td align="center"></td>
-                <td align="center"></td>
+                <td align="center" colspan="2"><b>{{ $setting->ketua_umum }}</b></td>
+
+                <td align="center"><b>{{ $setting->sekjen }}</b></td>
             </tr>
-            <tr>
-                <td align="center"><b>H. JUBAEDI AF</b></td>
-                <td align="center"><b>TB. TISNA</b></td>
-            </tr>
-        </table> --}}
+        </table>
         </div>
     </body>
 </html>
